@@ -51,7 +51,16 @@ To reproduce the experiments, clone this repository and install the required Pyt
 pip install -r requirements.txt
 
 # Prepare data and create sliding windows
-python src/prepare_data.py --input data/starbucks_prices.csv --window 60
+python sr
+
+To run the provided Python script, set an environment variable `STOCK_DATA_PATH` to the location of your CSV file (or place `starbucks_stock.csv` inside a `data/` folder). Then execute:
+
+```bash
+python financial_forecasting.py
+```
+
+The script will preprocess the data, train the four neural network models, and print performance metrics for each model.
+c/prepare_data.py --input data/starbucks_prices.csv --window 60
 
 # Train the CNN‑LSTM model
 python src/train_model.py --model cnn_lstm --window 60 --epochs 50 --batch_size 32
